@@ -73,15 +73,17 @@ gulp.task('build:css', () => {
         .pipe(reload({ stream: true }))
 })
 
+const mod = (__dirname.includes(process.cwd()) ? process.cwd() : __dirname) + '/node_modules/';
+
 gulp.task('build:js', () => {
     gulp.src(path.src.js)
         .pipe(plumber())
         .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(babel(
-            {presets: ['@babel/env']}
+            {presets: [[mod + 'babel-preset-env']]}
         ))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream: true }))
@@ -101,7 +103,7 @@ gulp.task('build:img', () => {
 })
 
 gulp.task('build:svg', ()=>{
-    gulp.src('src/img/**/*.svg')
+    gulp.src('src/svg/**/*.svg')
         .pipe(plumber())
         .pipe(gulp.dest(path.build.img))
 

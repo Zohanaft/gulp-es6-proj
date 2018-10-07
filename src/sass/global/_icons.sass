@@ -1,12 +1,21 @@
-.icon-glasses
-    &:before
-        background: url('/../svg/icon-glasses.svg')
-        padding-right: 10px
+.icon
+    width: 20px
+    height: 12px
+    display: inline-block
+    margin-right: 12px
+    vertical-align: middle
+    background-repeat: no-repeat !important
+    background-position: center !important
+    background-size: contain !important
 
-.icon-levels
-    color: $main-color-subtitles
+.fill-icon
+    fill: $main-color-subtitles
+    transition: fill .2s ease-in-out
     
-    &:before
-        background: url('/../svg/icon-glasses.svg')
-        padding-right: 10px
-        fill: $main-color-subtitles
+.icon-titled
+    svg
+        margin-right: 12px
+    &:hover
+        .fill-icon
+            fill: $main-color-gradient-in
+            transition: fill .2s ease-in-out

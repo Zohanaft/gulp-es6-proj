@@ -1,0 +1,77 @@
+%paddings-an-borders
+    > *
+        padding-left: 50px
+        padding-right: 50px
+        border-left: 1px solid $main-color-subtitles
+        &:last-child
+            padding-right: 0
+        &:first-child
+            padding-left: 0
+            border-left: 0
+
+.ch-view-mode
+    color: $main-color-subtitles
+    transition: color .2s ease-in-out
+    &:hover
+        color: $main-color-gradient-in
+        cursor: pointer
+        transition: color .2s ease-in-out
+.social
+    display: flex
+
+@media screen and (max-width: 960px)
+    .header-top-first
+        position: absolute
+        top: -999px
+
+.header-top-first
+    padding-top: 19px
+    display: flex
+    font-size: 12px
+    color: $main-color-subtitles
+    .left-menu
+        a
+            &:hover
+                color: $main-color-gradient-in
+        display: flex
+        flex-flow: nowrap
+
+        @extend %paddings-an-borders
+
+    .right-menu
+        a
+            display: flex
+            flex-flow: column
+            justify-content: center
+        display: flex
+        @extend %paddings-an-borders
+
+.header-top-second
+    display: flex
+    margin-top: 60px
+    > .left-menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+    > .right-menu
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    .header-search
+        position: relative
+        width: 290px
+        border-bottom: 1px solid $main-color-subtitles
+.phone
+    color: $main-color-titles
+    font-size: 24px
+
+.search-button
+    position: absolute
+    right: 3px
+    background: url('/../img/search.svg') no-repeat center !important
+    background-size: contain
+    vertical-align: middle
+    cursor: pointer
+    width: 16px
+    height: 16px

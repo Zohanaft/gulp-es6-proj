@@ -1,11 +1,41 @@
 @import '_reset'
+
+input[type="button"], input[type="search"]
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    -o-appearance: none
+    appearance: none
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    background: transparent
+    border: 0
+    text-rendering: auto
+    color: initial
+    letter-spacing: normal
+    word-spacing: normal
+    text-transform: none
+    text-indent: 0px
+    text-shadow: none
+    display: inline-block
+    text-align: start
+    margin: 0em
+    &:focus
+        outline: none
+
 @import '_bootstrap4-grid'
 @import '_fonts'
 @import '_variables'
 @import '_icons'
 
-
 body
     font-family: $font-lato-regular
     
+a
+    transition: color .2s ease-in-out
+    color: $main-color-subtitles 
+    &:hover
+        color: $main-color-gradient-to
+        transition: color .2s ease-in-out
     
