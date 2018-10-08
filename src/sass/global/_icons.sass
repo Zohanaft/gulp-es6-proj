@@ -11,7 +11,23 @@
 .fill-icon
     fill: $main-color-subtitles
     transition: fill .2s ease-in-out
-    
+
+.icon-titled-before
+    &:before
+        content: ""
+        display: inline-block
+        width: 20px
+        height: 20px
+        margin-right: 12px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        vertical-align: top
+
+#sign_up-in
+    &:before
+        background: url("/../img/sign-in.svg")
+
 .icon-titled
     svg
         margin-right: 12px
