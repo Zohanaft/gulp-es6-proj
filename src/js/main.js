@@ -31,6 +31,8 @@ icons.forEach(element => {
     });
 });
 
+
+//// TEST CODE
 class Man {
     constructor(selfname,ages) {
         this.name = selfname;
@@ -46,7 +48,7 @@ class Man {
 
 }
 
-let a = new Man("ГОВНО", 21)
+let a = new Man("zzzzzz", 21)
 a.sayAge()
 a.sayName()
 

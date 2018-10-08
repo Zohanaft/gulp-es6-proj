@@ -67,7 +67,7 @@ gulp.task('build:css', () => {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer({ browsers:['ie >= 8', 'last 4 version'] }))
-        //.pipe(cssmin())
+        .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({ stream: true }))
@@ -83,7 +83,7 @@ gulp.task('build:js', () => {
         .pipe(babel(
             {presets: [[mod + 'babel-preset-env']]}
         ))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream: true }))
